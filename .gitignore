@@ -1,4 +1,7 @@
 node_modules/
+dist/
+*.ts
+
 build/
 dist/
 coverage/

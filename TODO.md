@@ -3,7 +3,10 @@
 1. [x] Update README.md with project-specific content (deployment, GitHub Pages, DNS)
 2. [x] Create TODO.md for tracking
 3. [x] Update README.md with repo-specific details (lisprogdev/esport-branch)
-4. [] Commit and push to https://github.com/lisprogdev/esport-branch
-5. [] Go to repo Settings > Pages > Source: main branch
-6. [] Add custom domain 'esportbranch.my.id' in Pages settings
-7. [] Add DNS records to domain provider
+4. [x] Delete non-static files (package*.json, tsconfig.json, vite.config.ts, generate_images.ts)
+5. [x] Update .gitignore for static hosting
+6. [x] Verified files deleted
+7. [] git add . && git commit -m "Static hosting cleanup"
+8. [] git push
+9. [] GitHub Settings > Pages > Deploy from main
+10. [] Custom domain + DNS setup
