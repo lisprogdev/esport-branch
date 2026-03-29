@@ -6,7 +6,8 @@
 4. [x] Delete non-static files (package*.json, tsconfig.json, vite.config.ts, generate_images.ts)
 5. [x] Update .gitignore for static hosting
 6. [x] Verified files deleted
-7. [] git add . && git commit -m "Static hosting cleanup"
-8. [] git push
-9. [] GitHub Settings > Pages > Deploy from main
-10. [] Custom domain + DNS setup
+7. [x] SEO Optimization all HTML files (title, meta, alt text, OG tags)
+8. [] git add . && git commit -m "SEO optimization on-page for esport keywords"
+9. [] git push origin main
+10. [] GitHub Pages deploy from main
+11. [] Custom domain esportbranch.my.id + DNS
