@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - ESPORT BRANCH</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff7a00',
+                        secondary: '#1a2238',
+                        background: '#121212',
+                        accent: '#00f0ff',
+                        'text-primary': '#ffffff',
+                        'text-secondary': '#94a3b8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-link {
+            color: #94a3b8;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-link:hover {
+            color: #00f0ff;
+            transform: translateY(-2px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1a2238;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff7a00;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Responsive -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1a2238]/95 backdrop-blur-md border-b border-[#00f0ff]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="https://placehold.co/40x40/ff7a00/ffffff?text=EB" alt="Logo" class="w-10 h-10 rounded-lg" referrerPolicy="no-referrer">
+                        <span class="text-2xl font-black tracking-tighter text-white uppercase">
+                            ESPORT <span class="text-primary">BRANCH</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="index.html#home" class="nav-link font-medium">
+                        <i class="fa-solid fa-house text-sm"></i> Home
+                    </a>
+                    <a href="blog.html" class="nav-link font-medium">
+                        <i class="fa-solid fa-newspaper text-sm"></i> News Portal
+                    </a>
+                    <a href="index.html#services" class="nav-link font-medium">
+                        <i class="fa-solid fa-briefcase text-sm"></i> Services
+                    </a>
+                    <a href="index.html#tools" class="nav-link font-medium">
+                        <i class="fa-solid fa-screwdriver-wrench text-sm"></i> Tools
+                    </a>
+                    <a href="index.html#about" class="nav-link font-medium">
+                        <i class="fa-solid fa-circle-info text-sm"></i> About
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1a2238] border-b border-[#00f0ff]/10 px-4 py-6 space-y-4">
+            <a href="index.html#home" class="block nav-link text-lg py-2">
+                <i class="fa-solid fa-house text-sm"></i> Home
+            </a>
+            <a href="blog.html" class="block nav-link text-lg py-2">
+                <i class="fa-solid fa-newspaper text-sm"></i> News Portal
+            </a>
+            <a href="index.html#services" class="block nav-link text-lg py-2">
+                <i class="fa-solid fa-briefcase text-sm"></i> Services
+            </a>
+            <a href="index.html#tools" class="block nav-link text-lg py-2">
+                <i class="fa-solid fa-screwdriver-wrench text-sm"></i> Tools
+            </a>
+            <a href="index.html#about" class="block nav-link text-lg py-2">
+                <i class="fa-solid fa-circle-info text-sm"></i> About
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-text-secondary text-sm mb-8">
+                <a href="index.html" class="hover:text-accent">Home</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <span class="text-white">Terms of Service</span>
+            </nav>
+
+            <div class="space-y-12">
+                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">Terms of Service</h1>
+                
+                <div class="prose prose-invert max-w-none text-text-secondary leading-loose space-y-8 text-lg">
+                    <p>Last Updated: March 29, 2026</p>
+                    
+                    <section class="space-y-4">
+                        <h2 class="text-2xl font-bold text-white">1. Acceptance of Terms</h2>
+                        <p>By accessing and using the ESPORT BRANCH website and services, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+                    </section>
+
+                    <section class="space-y-4">
+                        <h2 class="text-2xl font-bold text-white">2. Use of Services</h2>
+                        <p>You agree to use our services only for lawful purposes and in accordance with these Terms. You are responsible for maintaining the confidentiality of any account information and for all activities that occur under your account.</p>
+                    </section>
+
+                    <section class="space-y-4">
+                        <h2 class="text-2xl font-bold text-white">3. Intellectual Property</h2>
+                        <p>All content on this website, including text, graphics, logos, and software, is the property of ESPORT BRANCH or its content suppliers and is protected by international copyright laws. You may not reproduce, distribute, or create derivative works from any content without our express written permission.</p>
+                    </section>
+
+                    <section class="space-y-4">
+                        <h2 class="text-2xl font-bold text-white">4. User Content</h2>
+                        <p>If you post or upload any content to our services, you grant ESPORT BRANCH a non-exclusive, royalty-free, perpetual, and worldwide license to use, modify, and display such content in connection with our services.</p>
+                    </section>
+
+                    <section class="space-y-4">
+                        <h2 class="text-2xl font-bold text-white">5. Limitation of Liability</h2>
+                        <p>ESPORT BRANCH shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use our services, even if we have been advised of the possibility of such damages.</p>
+                    </section>
+
+                    <section class="space-y-4">
+                        <h2 class="text-2xl font-bold text-white">6. Modifications to Terms</h2>
+                        <p>We reserve the right to modify these Terms of Service at any time. Your continued use of the services after any such changes constitutes your acceptance of the new Terms.</p>
+                    </section>
+
+                    <section class="space-y-4">
+                        <h2 class="text-2xl font-bold text-white">7. Governing Law</h2>
+                        <p>These Terms shall be governed by and construed in accordance with the laws of Indonesia, without regard to its conflict of law principles.</p>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Full Footer -->
+    <footer class="bg-[#1a2238] pt-24 pb-12 border-t border-[#00f0ff]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <!-- Company Info -->
+                <div class="space-y-8">
+                    <div class="flex items-center gap-2">
+                        <img src="https://placehold.co/40x40/ff7a00/ffffff?text=EB" alt="Logo" class="w-10 h-10 rounded-lg" referrerPolicy="no-referrer">
+                        <span class="text-2xl font-black tracking-tighter text-white uppercase">
+                            ESPORT <span class="text-primary">BRANCH</span>
+                        </span>
+                    </div>
+                    <p class="text-text-secondary leading-loose text-lg">
+                        Indonesia's leading hybrid esport management hub platform. We empower EOs, communities, and guilds with automation technology to create a more professional esport ecosystem.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-2xl text-text-secondary hover:text-primary transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-2xl text-text-secondary hover:text-primary transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="text-2xl text-text-secondary hover:text-primary transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-2xl text-text-secondary hover:text-primary transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-white font-black text-xl mb-8 uppercase tracking-widest">Navigation</h4>
+                    <ul class="space-y-5">
+                        <li><a href="index.html#home" class="nav-link text-lg"><i class="fa-solid fa-house text-sm"></i> Home</a></li>
+                        <li><a href="blog.html" class="nav-link text-lg"><i class="fa-solid fa-newspaper text-sm"></i> News Portal</a></li>
+                        <li><a href="index.html#services" class="nav-link text-lg"><i class="fa-solid fa-briefcase text-sm"></i> Services</a></li>
+                        <li><a href="index.html#tools" class="nav-link text-lg"><i class="fa-solid fa-screwdriver-wrench text-sm"></i> Tools</a></li>
+                        <li><a href="index.html#about" class="nav-link text-lg"><i class="fa-solid fa-circle-info text-sm"></i> About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div>
+                    <h4 class="text-white font-black text-xl mb-8 uppercase tracking-widest">Legal</h4>
+                    <ul class="space-y-5">
+                        <li><a href="privacy-policy.html" class="nav-link text-lg">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="nav-link text-lg text-accent">Terms of Service</a></li>
+                        <li><a href="disclaimer.html" class="nav-link text-lg">Disclaimer</a></li>
+                        <li><a href="cookie-policy.html" class="nav-link text-lg">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-black text-xl mb-8 uppercase tracking-widest">Contact Us</h4>
+                    <ul class="space-y-6 text-text-secondary text-lg">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-envelope text-primary mt-1"></i>
+                            <span>admin@esportbranch.id</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-phone text-primary mt-1"></i>
+                            <span>0895-1306-2824</span>
+                        </li>
+                        <li class="flex items-start gap-4 leading-relaxed">
+                            <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+                            <span>
+                                GH LBK ESPORT (Nonprofit Org)<br>
+                                RJCQ+59J, Palanro, Kec. Mallusetasi,<br>
+                                Kabupaten Barru, Sulawesi Selatan 90753
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-12 border-t border-[#00f0ff]/10 text-center text-text-secondary text-base">
+                <p>&copy; 2026 ESPORT BRANCH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla JS for Mobile Menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+    </script>
+</body>
+</html>

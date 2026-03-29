@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal - ESPORT BRANCH</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff7a00',
+                        secondary: '#1a2238',
+                        background: '#121212',
+                        accent: '#00f0ff',
+                        'text-primary': '#ffffff',
+                        'text-secondary': '#94a3b8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-link {
+            color: #94a3b8;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-link:hover {
+            color: #00f0ff;
+            transform: translateY(-2px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1a2238;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff7a00;
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Responsive -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1a2238]/95 backdrop-blur-md border-b border-[#00f0ff]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="https://placehold.co/40x40/ff7a00/ffffff?text=EB" alt="Logo" class="w-10 h-10 rounded-lg" referrerPolicy="no-referrer">
+                        <span class="text-2xl font-black tracking-tighter text-white uppercase">
+                            ESPORT <span class="text-primary">BRANCH</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="index.html#home" class="nav-link font-medium">
+                        <i class="fa-solid fa-house text-sm"></i> Home
+                    </a>
+                    <a href="blog.html" class="nav-link font-medium text-accent">
+                        <i class="fa-solid fa-newspaper text-sm"></i> News Portal
+                    </a>
+                    <a href="index.html#services" class="nav-link font-medium">
+                        <i class="fa-solid fa-briefcase text-sm"></i> Services
+                    </a>
+                    <a href="index.html#tools" class="nav-link font-medium">
+                        <i class="fa-solid fa-screwdriver-wrench text-sm"></i> Tools
+                    </a>
+                    <a href="index.html#about" class="nav-link font-medium">
+                        <i class="fa-solid fa-circle-info text-sm"></i> About
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1a2238] border-b border-[#00f0ff]/10 px-4 py-6 space-y-4">
+            <a href="index.html#home" class="block nav-link text-lg py-2">
+                <i class="fa-solid fa-house text-sm"></i> Home
+            </a>
+            <a href="blog.html" class="block nav-link text-lg py-2 text-accent">
+                <i class="fa-solid fa-newspaper text-sm"></i> News Portal
+            </a>
+            <a href="index.html#services" class="block nav-link text-lg py-2">
+                <i class="fa-solid fa-briefcase text-sm"></i> Services
+            </a>
+            <a href="index.html#tools" class="block nav-link text-lg py-2">
+                <i class="fa-solid fa-screwdriver-wrench text-sm"></i> Tools
+            </a>
+            <a href="index.html#about" class="block nav-link text-lg py-2">
+                <i class="fa-solid fa-circle-info text-sm"></i> About
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h1 class="text-5xl md:text-7xl font-black mb-6">Esport <span class="text-primary">News</span></h1>
+                <p class="text-text-secondary text-xl max-w-2xl mx-auto">Stay ahead of the game with the latest updates from ESPORT BRANCH and the global esport scene.</p>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Blog 1 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=1'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/esport1/800/450" alt="Blog 1" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-primary text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Community</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">The Vision Behind ESPORT BRANCH</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Discover why we are building the most comprehensive esport hub in South Sulawesi and how it will benefit local players...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-primary transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 2 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=2'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/esport2/800/450" alt="Blog 2" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-accent text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Services</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors leading-tight">Why Every Tournament Needs Professional Casters</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        A great caster can turn a simple match into an epic saga. Learn how our caster hub will elevate community events...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-accent transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 3 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=3'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/esport3/800/450" alt="Blog 3" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-white text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Tools</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-white transition-colors leading-tight">Automating Your Esport Workflow</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Efficiency is key to running a successful guild or tournament. We explore the tools that will change the way you manage esport...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:opacity-70 transition-opacity text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 4 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=4'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/guild/800/450" alt="Blog 4" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-primary text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Community</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">Building an Esport Community from Scratch</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Guilds are the foundation of the esport ecosystem. This article discusses how to recruit members, build team culture, and maintain community activity...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-primary transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 5 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=5'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/monetization/800/450" alt="Blog 5" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-accent text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Services</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors leading-tight">Event Organizer Monetization Strategies</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        How can local EOs survive? Learn how to get sponsors, sell tickets, and manage merchandise...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-accent transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 6 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=6'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/design/800/450" alt="Blog 6" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-accent text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Services</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors leading-tight">The Importance of Graphic Branding Design</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Visuals are everything in the digital world. Why professional logos, jerseys, and stream overlays can increase a team's selling value...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-accent transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 7 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=7'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/manager/800/450" alt="Blog 7" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-primary text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Community</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">The Role of an Esport Team Manager</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        A manager is not just a schedule setter. They are the bridge between players, the organization, and sponsors...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-primary transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 8 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=8'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/tech/800/450" alt="Blog 8" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-white text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Tools</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:opacity-70 transition-opacity leading-tight">Esport Technology Trends 2026</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        The future of esport is already here. How the latest technologies like AI, VR, and the Metaverse are changing the way we play...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:opacity-70 transition-opacity text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 9 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=9'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/mentalhealth/800/450" alt="Blog 9" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-primary text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Community</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">Mental Health in Competitive Gaming</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Performance isn't just about skill; it's about the mind. We explore the growing importance of psychological support for professional athletes...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-primary transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 10 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=10'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/mobile/800/450" alt="Blog 10" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-accent text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Services</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors leading-tight">The Rise of Mobile Esports in Southeast Asia</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Mobile gaming is no longer just a casual pastime. Discover why Southeast Asia has become the global epicenter for mobile esport tournaments...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-accent transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 11 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=11'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/sponsor/800/450" alt="Blog 11" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-accent text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Services</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors leading-tight">Securing Sponsorship for Gaming Teams</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Getting funded is a major milestone for any guild. Learn the professional way to approach brands and create winning sponsorship proposals...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-accent transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 12 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=12'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/women/800/450" alt="Blog 12" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-primary text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Community</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">The Future of Women in Esports</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Breaking barriers and setting new records. We look at the increasing participation of women in competitive gaming and the path to inclusivity...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-primary transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 13 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=13'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/streaming/800/450" alt="Blog 13" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-white text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Tools</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:opacity-70 transition-opacity leading-tight">Streaming Setup Essentials for Aspiring Creators</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Ready to go live? From hardware choices to software optimization, here is everything you need to start your professional streaming journey...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:opacity-70 transition-opacity text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 14 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=14'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/arena/800/450" alt="Blog 14" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-primary text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Community</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">The Evolution of Esport Arenas</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        From small internet cafes to massive multi-million dollar stadiums, the physical spaces for esport have undergone a radical transformation...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-primary transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 15 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=15'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/analytics/800/450" alt="Blog 15" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-accent text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Services</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors leading-tight">Data Analytics in Esport Coaching</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        Performance isn't just about reflexes anymore. Top-tier teams are using advanced data analytics to gain a competitive edge...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-accent transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 16 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=16'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/5g/800/450" alt="Blog 16" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-white text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Tools</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:opacity-70 transition-opacity leading-tight">The Impact of 5G on Mobile Gaming</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        5G technology is a game-changer for mobile esport, offering lower latency and higher speeds than ever before...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:opacity-70 transition-opacity text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Blog 17 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=17'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/branding/800/450" alt="Blog 17" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-primary text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Community</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">Building a Personal Brand as a Pro Player</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        In the modern esport era, being good at the game is only half the battle. Players must also build a strong personal brand...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-primary transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+                <!-- Blog 18 -->
+                <div class="group cursor-pointer" onclick="window.location.href='blog-detail.html?id=18'">
+                    <div class="relative overflow-hidden rounded-2xl mb-8 aspect-video">
+                        <img src="https://picsum.photos/seed/law/800/450" alt="Blog 18" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                        <div class="absolute top-6 left-6 bg-accent text-black text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest">Services</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors leading-tight">Esport Law: Understanding Contracts and Rights</h3>
+                    <p class="text-text-secondary mb-8 line-clamp-3 text-lg">
+                        As the industry matures, legal protections for players and organizations have become more critical than ever. Know your rights...
+                    </p>
+                    <span class="text-white font-bold flex items-center gap-3 group-hover:text-accent transition-colors text-lg">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Full Footer -->
+    <footer class="bg-[#1a2238] pt-24 pb-12 border-t border-[#00f0ff]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <!-- Company Info -->
+                <div class="space-y-8">
+                    <div class="flex items-center gap-2">
+                        <img src="https://placehold.co/40x40/ff7a00/ffffff?text=EB" alt="Logo" class="w-10 h-10 rounded-lg" referrerPolicy="no-referrer">
+                        <span class="text-2xl font-black tracking-tighter text-white uppercase">
+                            ESPORT <span class="text-primary">BRANCH</span>
+                        </span>
+                    </div>
+                    <p class="text-text-secondary leading-loose text-lg">
+                        Indonesia's leading hybrid esport management hub platform. We empower EOs, communities, and guilds with automation technology to create a more professional esport ecosystem.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-2xl text-text-secondary hover:text-primary transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-2xl text-text-secondary hover:text-primary transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="text-2xl text-text-secondary hover:text-primary transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-2xl text-text-secondary hover:text-primary transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-white font-black text-xl mb-8 uppercase tracking-widest">Navigation</h4>
+                    <ul class="space-y-5">
+                        <li><a href="index.html#home" class="nav-link text-lg"><i class="fa-solid fa-house text-sm"></i> Home</a></li>
+                        <li><a href="blog.html" class="nav-link text-lg"><i class="fa-solid fa-newspaper text-sm"></i> News Portal</a></li>
+                        <li><a href="index.html#services" class="nav-link text-lg"><i class="fa-solid fa-briefcase text-sm"></i> Services</a></li>
+                        <li><a href="index.html#tools" class="nav-link text-lg"><i class="fa-solid fa-screwdriver-wrench text-sm"></i> Tools</a></li>
+                        <li><a href="index.html#about" class="nav-link text-lg"><i class="fa-solid fa-circle-info text-sm"></i> About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div>
+                    <h4 class="text-white font-black text-xl mb-8 uppercase tracking-widest">Legal</h4>
+                    <ul class="space-y-5">
+                        <li><a href="privacy-policy.html" class="nav-link text-lg">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="nav-link text-lg">Terms of Service</a></li>
+                        <li><a href="disclaimer.html" class="nav-link text-lg">Disclaimer</a></li>
+                        <li><a href="cookie-policy.html" class="nav-link text-lg">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-black text-xl mb-8 uppercase tracking-widest">Contact Us</h4>
+                    <ul class="space-y-6 text-text-secondary text-lg">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-envelope text-primary mt-1"></i>
+                            <span>admin@esportbranch.id</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-phone text-primary mt-1"></i>
+                            <span>0895-1306-2824</span>
+                        </li>
+                        <li class="flex items-start gap-4 leading-relaxed">
+                            <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+                            <span>
+                                GH LBK ESPORT (Nonprofit Org)<br>
+                                RJCQ+59J, Palanro, Kec. Mallusetasi,<br>
+                                Kabupaten Barru, Sulawesi Selatan 90753
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-12 border-t border-[#00f0ff]/10 text-center text-text-secondary text-base">
+                <p>&copy; 2026 ESPORT BRANCH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla JS for Mobile Menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+    </script>
+</body>
+</html>
